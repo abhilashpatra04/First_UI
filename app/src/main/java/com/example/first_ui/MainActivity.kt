@@ -92,6 +92,7 @@ fun Homescreen(){
                 color = Color.DarkGray
             )
             CourseSection()
+            Card1()
             SliderMinimalExample()
             SwitchWithIconExample()
 
@@ -238,6 +239,24 @@ fun SwitchWithIconExample() {
             null
         }
     )
+}
+@Composable
+fun Card1(color : Color = skyblue1,
+          color2: Color = Black) {
+
+
+    Card(colors = CardDefaults.cardColors(containerColor = color, contentColor = color2) ,
+        modifier = Modifier
+            .size(width = 200.dp, height = 200.dp)
+            .padding(16.dp)
+    ) {
+        Text(
+            text = "geek of the year",
+            modifier = Modifier
+                .padding(horizontal = 15.dp, vertical = 15.dp).fillMaxSize(),
+            textAlign = TextAlign.Center,
+        )
+    }
 }
 
 
